@@ -15,11 +15,13 @@ public class Iisconfiguration
 public class Email
 {
     public Source Source { get; set; } = new();
-    public string Destination { get; set; } = string.Empty;
+    public string Destination { get; set; } = "";
 }
 
 public class Source
 {
-    public string username { get; set; } = string.Empty;
-    public string password { get; set; } = string.Empty;
+    public string Username { get; set; } = "";
+    public string Password { get; set; } = "";
+    public string Host { get; set; } = "smtp.gmail.com";
+    public int Port { get; set; } = 587;
 }

@@ -27,7 +27,7 @@ namespace WSIISManager
                 _logger.LogInformation("Worker running at: {time}", DateTimeOffset.Now);
 
                 await _serviceExecution.StartSitesAsync(_iisconfiguration.Sites);
-
+                await _emailService.SendEmail(_iisconfiguration.Email);
                 await Task.Delay(1000, stoppingToken);
             }
         }
